@@ -1,0 +1,94 @@
+<!--
+    Title: Loan Calculator
+    Author: Giuseppe Garone
+    
+    Description: This simple app allows you to determine the monthly payments on a loan,
+		given a certain amount, interest and term. It's based on many other loan calculator
+		available on the web.
+    
+    Technologies: The app was made with HTML5, CSS3 and JavaScript. The main goal was to
+		practice some JavaScript, so I didn't use any library such as jQuery. The responsiveness
+		of the layout is made with media queries, and it's based on window's width.
+    
+    Created: March 1, 2018
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loan Calculator</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mukta+Mahee:400,700">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton">
+  <link rel="stylesheet" href="http://meyerweb.com/eric/tools/css/reset/reset.css">
+  <link rel="stylesheet" href="custom.css">
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="main-header fixed-width">
+    <h1 class="main-title">Loan Calculator</h1>
+    <p class="description">This loan calculator will help you determine the monthly payments on a loan. Complete the form below and click calculate. Click reset button to calculate another loan.</p>
+  </header>
+  <!-- MAIN SECTION -->
+  <section class="main-section fixed-width">
+    <div class="wrapper clearfix">
+      <!-- INPUT SECTION -->
+      <div class="input-section">
+        <fieldset>
+          <p class="input-field">
+            <label class="label" for="loan-amount">Loan amount</label>
+            <br>
+            <input id="loan-amount" class="user-input" type="text" placeholder="$5,000">
+          </p>
+          <p id="loan-error-message" class="error-msg"></p>
+          <p class="input-field">
+            <label class="label" for="loan-term">Loan term</label>
+            <br>
+            <input id="loan-term" class="user-input small" type="text" placeholder="24">
+            <select id="term-type" class="select-term-type">
+              <option value="year">Years</option>
+              <option value="month" selected="">Months</option>
+            </select>
+          </p>
+          <p id="term-error-message" class="error-msg"></p>
+          <p class="input-field">
+            <label class="label" for="interest-rate">Interest rate per year</label>
+            <br>
+            <input id="interest-rate" class="user-input" type="text" placeholder="5%">
+          </p>
+          <p id="interest-error-message" class="error-msg"></p>
+          <div class="buttons clearfix">
+            <button id="calculate-btn" class="btn">Calculate</button>
+            <button id="reset-btn" class="btn">Reset</button>
+          </div>
+        </fieldset>
+      </div>
+      <!-- OUTPUT SECTION -->
+      <div class="output-section">
+        <div class="output-section-contents">
+          <div class="output-section-header">
+            <p>Monthly payments</p>
+            <p id="monthly-payments">&dollar;0.00</p>
+          </div>
+          <div class="output-section-resume">
+            <p>Principal paid
+              <span id="principal-paid">&dollar;0.00</span>
+            </p>
+            <p>Interested paid
+              <span id="interested-paid">&dollar;0.00</span>
+            </p>
+            <p>Total paid
+              <span id="total-paid">&dollar;0.00</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="main.js"></script>
+</body>
+
+</html>
