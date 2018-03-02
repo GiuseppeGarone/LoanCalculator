@@ -1,0 +1,253 @@
+body, *, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body {
+	font-family: 'Helvetica Neue', Helvetica, sans-serif;
+	font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-family: 'Mukta Malar', sans-serif;
+}
+
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.fixed-width {
+	margin: 0 auto;
+	padding: 1em;
+	width: 100%;
+}
+
+.label {
+	font-weight: bold;
+}
+
+.input-field:nth-child(2) {
+	margin-top: 1em;
+}
+
+.error-msg {
+	color: #b32920;
+	margin: 0 0 1em 0;
+	font-weight: bold;
+}
+
+.invalid-input {
+	box-shadow: 0 0 8px 0 red;
+}
+
+/* ===== HEADER ===== */
+.main-header {
+	background-color: #fff;
+	text-align: center;
+	}
+	.main-title {
+		font-family: 'Anton', sans-serif;
+		font-size: 2.5em;
+		padding: 0.25em 0;
+	}
+	.description {
+		color: #666;
+		line-height: 1.25;
+	}
+
+/* ===== MAIN ===== */
+.main-section {
+	background-color: #233ec4;
+	padding: 1.5em;
+}
+
+/* ===== INPUT ===== */
+.input-section {
+	background-color: #f0f0f6;
+	padding: 1em;
+	}
+	.user-input {
+		background: #fff;
+	  border: 1px solid #666;
+		margin: 0.7em 0;
+	  padding: 0.5em;
+	  width: 100%;
+	}
+	.user-input.small {
+		width: 70%;
+	}
+	.select-term-type {
+		border: 1px solid #666;
+		padding: 0.25em 0;
+		width: 28%;
+	}
+	.buttons {
+		width: 100%;
+		}
+		.btn {
+			border: none;
+			color: #fff;
+			font-family: 'Mukta Malar', sans-serif;
+			font-size: 0.85em;
+			height: 3em;
+			letter-spacing: 2px;
+			text-transform: uppercase;
+			width: 48%;
+		}
+		.btn:hover {
+			cursor: pointer;
+		}
+		#calculate-btn {
+			background-color: #233ec4;
+			float: left;
+		}
+		#calculate-btn:hover {
+			background-color: #1652F1;
+		}
+		#reset-btn {
+			background-color: #b32920 ;
+			float: right;
+		}
+		#reset-btn:hover {
+			background-color: #e8382b;
+		}
+
+/* ===== OUTPUT ===== */
+.output-section {
+	background-color: #fff;
+	padding: 1em;
+	}
+	.output-section-header {
+		border-bottom: 1px solid #666;
+		line-height: 1.5;
+		margin: 0 auto;
+		padding: 0.25em 0;
+		text-align: center;
+		width: 90%;
+		}
+		.output-section-header > #monthly-payments {
+			font-size: 1.6em;
+			font-weight: bold;
+		}
+	.output-section-resume {
+		line-height: 1.35;
+		margin: 0 auto;
+		padding: 0.5em 0;
+		width: 90%;
+		}
+		.output-section-resume p span {
+			float: right;
+		}
+
+/* ===== MEDIA QUERIES ===== */
+@media (max-width: 300px) {
+	.user-input.small {
+		width: 60%;
+	}
+	.select-term-type {
+		width: 35%;
+	}
+}
+
+@media (min-width: 501px) {
+	.main-header {
+		padding: 0 0.5em;
+		width: 500px;
+		}
+		.main-title {
+			font-size: 3em;
+			padding: 0.5em 0 0.25em 0;
+		}
+		.description {
+			padding: 0.5em 0 1.5em 0;
+		}
+
+	.main-section {
+		width: 100%;
+	}
+
+	.input-section {
+		margin: 0 auto;
+		width: 450px;
+	}
+
+	.output-section {
+		margin: 0 auto;
+		width: 450px;
+	}
+}
+
+@media (min-width: 801px) {
+	.main-header {
+		padding: 2em 0;
+		width: 700px;
+		}
+		.main-title {
+			padding-bottom: 0.5em;
+		}
+		.description {
+			padding: 0;
+		}
+
+	.main-section {
+		width: 100%;
+	}
+
+	.wrapper {
+		display: flex;
+		margin: 0 auto;
+		width: 700px;
+	}
+
+	.input-section {
+		float: left;
+		margin: 0 auto;
+		width: 50%;
+		}
+		.user-input {
+			background: #fff;
+			border: 1px solid #666;
+			margin: 1.25em 0;
+			padding: 1em;
+			width: 100%;
+		}
+		.select-term-type {
+			border: 1px solid #666;
+			padding: 0.5em 0;
+			width: 28%;
+		}
+
+	.output-section {
+		float: right;
+		margin: 0 auto;
+		padding: 0;
+		position: relative;
+		width: 50%;
+		}
+		.output-section-contents {
+			margin: 0 auto;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 100%;
+			}
+			.output-section-header {
+				font-size: 1.5em;
+				line-height: 1.5;
+				padding: 1em 0 1.25em 0;
+				}
+				.output-section-header > #monthly-payments {
+					font-size: 2em;
+					font-weight: bold;
+					margin-top: 0.25em;
+				}
+				.output-section-resume {
+					line-height: 1.75;
+					margin: 0 auto;
+					padding: 2em 0;
+				}
+}
