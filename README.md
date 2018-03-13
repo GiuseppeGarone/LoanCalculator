@@ -8,4 +8,4 @@ Enter the loan amount, the interest rate (monthly) and the term (in months or ye
 The app was made with HTML5, CSS3 and JavaScript. The main goal was to practice some pure (Vanilla) JavaScript, so I didn't use any library such as jQuery. The responsiveness of the layout is made with media queries, and it's based on window's width.
 
 ## Images
-![simulatore](res/layout.png "Vertical and horizontal layout")
+![image](res/layout.png "Vertical and horizontal layout")
